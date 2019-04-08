@@ -4,7 +4,6 @@ import datetime
 class UserBookingSerializer(serializers.ModelSerializer):
     #to vaidate against time passed
     status = serializers.SerializerMethodField()
-    service = serializers.StringRelatedField()
     class Meta:
         model = UserBooking
         fields = ('__all__')

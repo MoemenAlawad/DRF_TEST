@@ -5,8 +5,8 @@ from rest_framework import generics
 import datetime
 # Create your views here.
 def valide_date(date):
-    year,month,day = date.split('-')
     try:
+        year,month,day = date.split('-')
         datetime.datetime(int(year),int(month),int(day))
         return True 
     except ValueError:
